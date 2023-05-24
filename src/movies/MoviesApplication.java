@@ -73,6 +73,14 @@ public class MoviesApplication {
         }
     }
 
+    private static void printMovies(String category) {
+        for (Movie pMovie : movieList){
+            if(pMovie.getCategory().equals(category) || category.equalsIgnoreCase("all")){
+                System.out.println(pMovie.getName() + " -- " + pMovie.getCategory());
+            }
+        }
+    }
+
     private static Movie getNewMovieFromUser() {
         Input in = new Input();
         System.out.println("Enter movie name: ");
@@ -81,14 +89,6 @@ public class MoviesApplication {
         String category = in.getString();
         Movie nMovie = new Movie(name, category);
         return nMovie;
-    }
-
-    private static void printMovies(String category) {
-        for (Movie pMovie : movieList){
-            if(pMovie.getCategory().equals(category) || category.equalsIgnoreCase("all")){
-                System.out.println(pMovie.getName() + " -- " + pMovie.getCategory());
-            }
-        }
     }
 
     public static  Movie[] addMovie(Movie[] movieArr, Movie movie){
