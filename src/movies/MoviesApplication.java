@@ -49,27 +49,17 @@ public class MoviesApplication {
     }
 
     private static void doChoice(int choice){
-        switch (choice){
-            case 1:
-                printMovies("all");
-                break;
-            case 2:
-                printMovies("animated");
-                break;
-            case 3:
-                printMovies("drama");
-                break;
-            case 4:
-                printMovies("horror");
-                break;
-            case 5:
-                printMovies("scifi");
-                break;
-            case 6:
+        switch (choice) {
+            case 1 -> printMovies("all");
+            case 2 -> printMovies("animated");
+            case 3 -> printMovies("drama");
+            case 4 -> printMovies("horror");
+            case 5 -> printMovies("scifi");
+            case 6 -> {
                 Movie movie = getNewMovieFromUser();
                 movieList = addMovie(movieList, movie);
                 printMovies("all");
-                break;
+            }
         }
     }
 
