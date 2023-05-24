@@ -32,7 +32,7 @@ public class Input {
         return getInt(min, max, prompt);
     }
 
-    public int getInt(){
+    public int getInt(int i, int i1){
         return this.scan.nextInt();
     }
 
